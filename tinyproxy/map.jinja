@@ -1,0 +1,9 @@
+{% set service = salt['grains.filter_by'](
+  {
+    'Debian': {
+      'pkgs': ["tinyproxy"],
+      'service': 'tinyproxy',
+    },
+  },
+  merge = salt['pillar.get']('tinyproxy')
+) %}

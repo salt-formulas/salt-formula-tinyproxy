@@ -1,0 +1,5 @@
+applications:
+- tinyproxy
+parameters:
+  tinyproxy:
+    enabled: true

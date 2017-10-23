@@ -1,0 +1,3 @@
+name: "tinyproxy"
+version: "0.1"
+source: "https://github.com/mitroko/salt-formula-tinyproxy"
