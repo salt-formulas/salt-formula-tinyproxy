@@ -6,7 +6,7 @@ tinyproxy_packages:
 
 tinyproxy_config:
   file.managed:
-  - name: /etc/tinyproxy/tinyproxy.conf
+  - name: /etc/tinyproxy.conf
   - source: salt://tinyproxy/files/tinyproxy.conf
   - template: jinja
   - user: root
