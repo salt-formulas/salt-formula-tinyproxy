@@ -1,8 +1,18 @@
-{% set service = salt['grains.filter_by'](
+{% set server = salt['grains.filter_by'](
   {
-    'Debian': {
+    'default': {
       'pkgs': ["tinyproxy"],
       'service': 'tinyproxy',
+      'user': 'nobody',
+      'group': 'nogroup',
+      'log': {
+        'level': 'info',
+        'file': '/var/log/tinyproxy/tinyproxy.log',
+      },
+      'bind': {
+        'address': 0.0.0.0,
+        'port': 8888,
+      },
     },
   },
   merge = salt['pillar.get']('tinyproxy')

@@ -1,4 +1,6 @@
 {%- if pillar.tinyproxy is defined %}
 include:
-- tinyproxy.service
+{%- if pillar.tinyproxy.server is defined %}
+  - tinyproxy.server
+{%- endif %}
 {%- endif %}

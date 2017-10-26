@@ -10,14 +10,19 @@ TinyProxy: Basic configuration
 .. code-block:: yaml
 
     tinyproxy:
-      enabled: true
-      listen: 172.16.21.101
-      allow_nets:
-      - 127.0.0.1
-      - 172.16.21.0/24
-      connect_ports:
-      - 443
-      upstream: 10.11.236.1:8080
+      server:
+        enabled: true
+        bind:
+          address: 172.16.21.101
+          port: 8888
+        allow:
+          - 127.0.0.1
+          - 172.16.21.0/24
+        deny:
+          - 8.8.8.8
+        connect_ports:
+          - 443
+        upstream: 10.11.236.1:8080
 
 
 More Information

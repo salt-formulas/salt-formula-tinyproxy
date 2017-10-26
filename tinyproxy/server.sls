@@ -1,8 +1,10 @@
-{%- from "tinyproxy/map.jinja" import service with context %}
+{%- from "tinyproxy/map.jinja" import server with context %}
+
+{%- if server.get('enabled', true) %}
 
 tinyproxy_packages:
-  pkg.installed: 
-  - names: {{ service.pkgs }}
+  pkg.installed:
+  - names: {{ server.pkgs }}
 
 tinyproxy_config:
   file.managed:
@@ -15,7 +17,9 @@ tinyproxy_config:
 
 tinyproxy_service:
   service.running:
-  - name: {{ service.service }}
+  - name: {{ server.service }}
   - enable: true
   - watch:
     - file: tinyproxy_config
+
+{%- endif %}
