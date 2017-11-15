@@ -1,0 +1,3 @@
+tinyproxy:
+  server:
+    enabled: true
