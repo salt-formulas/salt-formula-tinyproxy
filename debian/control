@@ -10,6 +10,6 @@ Vcs-Git: https://github.com/mitroko/salt-formula-tinyproxy.git
 
 Package: salt-formula-tinyproxy
 Architecture: all
-Depends: ${misc:Depends}, salt-master, reclass
+Depends: ${misc:Depends}
 Description: TinyProxy salt formula
  Install and configure TinyProxy service. Customize tinyproxy rules.
