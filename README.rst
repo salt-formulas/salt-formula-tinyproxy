@@ -23,6 +23,9 @@ TinyProxy: Basic configuration
         connect_ports:
           - 443
         upstream: 10.11.236.1:8080
+        noupstream:
+          - domain.to.be.excluded.from.proxying
+          - 127.0.0.0/24
 
 
 More Information
